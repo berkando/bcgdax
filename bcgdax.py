@@ -55,6 +55,7 @@ def store_trades(filepath, data):
 
 def read_trades(filepath):
     store = pd.HDFStore(filepath)
+    return store.trades if '/trades' in store else None
 
 
 if __name__ == '__main__':
